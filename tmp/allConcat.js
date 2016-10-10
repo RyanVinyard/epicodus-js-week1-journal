@@ -6,13 +6,11 @@ $(document).ready(function() {
     var body = $('#body').val();
     var journalEntry = new Entry(title, body);
     var output = journalEntry.numberOfWords(body);
+    var outputVowels = journalEntry.vowelsCount(body);
+    var outputConsonants = journalEntry.consonantsCount(body);
     $('#count').text(output);
-
-
-    // console.log(body);
-    // $('#count').text(body.numberOfWords());
-
-
+    $('#number-of-vowels').text(outputVowels);
+    $('#number-of-consonants').text(outputConsonants);
   });
 });
 
