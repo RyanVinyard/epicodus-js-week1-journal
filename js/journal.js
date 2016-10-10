@@ -5,7 +5,7 @@ function Entry(title, body) {
 
 Entry.prototype.numberOfWords = function(body) {
   return body.split(' ').length;
-}
+};
 
 Entry.prototype.vowelsCount = function(body) {
   var vowels = ['a', 'e', 'i', 'o', 'u'];
@@ -19,9 +19,7 @@ Entry.prototype.vowelsCount = function(body) {
   }
 
   return ourVowels.length;
-
-
-}
+};
 
 Entry.prototype.consonantsCount = function(body) {
   var consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'x', 'z', 'w', 'y'];
@@ -35,7 +33,21 @@ Entry.prototype.consonantsCount = function(body) {
   }
 
   return ourConsonants.length;
+};
 
-}
+Entry.prototype.getTeaser = function(body) {
+  var splitPeriod = body.split('.');
+  var splitWord = splitPeriod[0].split(' ');
+  var firstSentence = [];
+  console.log(splitPeriod);
+  console.log(splitWord);
+  if (splitWord.length <= 8) {
+    firstSentence = splitWord;
+  } else {
+    firstSentence = splitWord.slice(9);
+  }
+  firstSentence.join(" ");
+  return firstSentence;
+};
 
 exports.journalModule = Entry;
