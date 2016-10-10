@@ -3,9 +3,25 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <title>Ping Pong</title>
+    <title>My Journal</title>
   </head>
   <body>
+
+    <form id="entry-form">
+      <label for="title">Journal Entry Title:</label>
+      <input type="text" id="title">
+      <label for="body">Journal Entry:</label>
+      <input type="text" id="body">
+      <button type="submit"></button>
+    </form>
+    <h2>Journal Entry:</h2>
+    <p id="journal-entry-title"></p>
+    <p id="journal-entry-body"></p>
+
+    <button id="count-button" type="button">Count</button>
+
+    <h2>Number of words in the body:</h2>
+    <p id="count"></p>
 
   </body>
 </html>
